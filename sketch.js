@@ -33,8 +33,6 @@ function setup() {
     frictionAir:0.01
   }
 
-	World.add(world,con)
-
 	roofObject=new roof(400,250,230,20);
 	bob1 = new bob(320,575,40)
 	bob2 = new bob(360,575,40)
@@ -88,9 +86,9 @@ function draw() {
 }
 
 function vForce(){
+if(keyCode===UP_ARROW){
   Matter.Body.applyForce(ball,{x:0,y:0},{x:0.05,y:0});
 }
-
-if(keyDown(UP_ARROW)){
- bob.positionX=0.5; 
 }
+
+

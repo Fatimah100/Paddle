@@ -91,6 +91,6 @@ function vForce(){
   Matter.Body.applyForce(ball,{x:0,y:0},{x:0.05,y:0});
 }
 
-if(keyDown(UP ARROW)){
+if(keyDown(UP_ARROW)){
  bob.positionX=0.5; 
 }

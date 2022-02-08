@@ -18,21 +18,6 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-  var ground_options ={
-    isStatic: true
-  };
- 
-  var bob_options = {
-    restitution: 0.95,
-    frictionAir:0.01
-
-  }
-
-  var rock_options = {
-    restitution: 0.75,
-    frictionAir:0.01
-  }
-
 	roofObject=new roof(400,250,230,20);
 	bob1 = new bob(320,575,40)
 	bob2 = new bob(360,575,40)
@@ -48,7 +33,6 @@ function setup() {
 	
 	Engine.run(engine);
 	
-  
 }
 
 function draw() {
@@ -69,20 +53,6 @@ function draw() {
   bob4.display();
   bob5.display();
 
-  push();
-  strokeWeight(2)
-  stroke(225)
-  line(con.roofOject,con.roofObject.y,bob1.position.x,bob1.position.y)
-  pop();
-  line(con.roofOject,con.roofObject.y,bob2.position.x,bob2.position.y)
-  pop();
-  line(con.roofOject,con.roofObject.y,bob3.position.x,bob3.position.y)
-  pop();
-  line(con.roofOject,con.roofObject.y,bob4.position.x,bob4.position.y)
-  pop();
-  line(con.roofOject,con.roofObject.y,bob5.position.x,bob5.position.y)
-  pop();
-  Engine.update(engine);
 }
 
 function vForce(){
